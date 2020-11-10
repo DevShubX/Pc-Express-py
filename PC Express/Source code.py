@@ -28,7 +28,7 @@ import mysql.connector
 
 mydb=mysql.connector.connect(host="localhost",user="root",passwd="",db="pc_express")
 mycursor=mydb.cursor()
-mycursor.execute("create table Rams(Company varchar(100),Name varchar(50),Size varchar(5),Speed varchar(100),Ram_type varchar(100),Qty varchar(100),Price varchar(100))")
+mycursor.execute("create table Ram(Company varchar(100),Name varchar(50),Size varchar(5),Speed varchar(100),Ram_type varchar(100),Qty varchar(100),Price varchar(100))")
 
 # table 4 for storage
 
@@ -71,5 +71,3 @@ mycursor=mydb.cursor()
 mycursor.execute("create table Sales_Details(C_name varchar(100),Phone_NO varchar(100),Description_of_Goods varchar(100),Date_of_purchase date,Qty varchar(100),Price varchar(100))")
 
 
-divyansh and arun always have a beautiful nights together 
-#Andheri raat me Diya iski G***d me
