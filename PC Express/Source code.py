@@ -70,4 +70,4 @@ mydb=mysql.connector.connect(host="localhost",user="root",passwd="",db="pc_expre
 mycursor=mydb.cursor()
 mycursor.execute("create table Sales_Details(C_name varchar(100),Phone_NO varchar(100),Description_of_Goods varchar(100),Date_of_purchase date,Qty varchar(100),Price varchar(100))")
 
-mycursor.execute("Arun Randwa hai")
+
