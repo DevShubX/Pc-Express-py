@@ -71,4 +71,5 @@ mycursor=mydb.cursor()
 mycursor.execute("create table Sales_Details(C_name varchar(100),Phone_NO varchar(100),Description_of_Goods varchar(100),Date_of_purchase date,Qty varchar(100),Price varchar(100))")
 
 
-divyansh and arun always have a beautiful nights together
+divyansh and arun always have a beautiful nights together 
+#Andheri raat me Diya iski G***d me
