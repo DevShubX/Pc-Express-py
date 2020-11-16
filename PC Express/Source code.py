@@ -62,7 +62,7 @@ while(c=='y'):
                         price=input('Enter Price:')
                         mycursor.execute("""INSERT INTO motherboard(Name,Company,Socket_type,Chipset,Qty,Price)VALUES(%s,%s,%s,%s,%s,%s)""",(name,company,soctype,chip,qty,price))
                         mydb.commit()
-                        print("Done")
+                        print("Record Inserted")
                     except Exception as e:
                         print("Unable to insert record")
                         print(e)
@@ -85,7 +85,7 @@ while(c=='y'):
                         mycursor=mydb.cursor()
                         D=input("Enter the statement to Fetch from table ")
                         mycursor.execute(D)
-                        print("Data Displayed")
+                        print("Record Displayed")
                         mydb.commit()
                     except Exception as e:
                         print("Error:unable to fetch data.Please try again")
@@ -98,7 +98,7 @@ while(c=='y'):
                         w=input("Enter the Sql Command:")
                         mycursor.execute(w)
                         mydb.commit()
-                        print("Table is Modified")
+                        print("Record Modified")
                     except Exception as e:
                         print(e)
                         print("Unable to Modify")
@@ -153,7 +153,7 @@ while(c=='y'):
                         price=input('Enter price:')
                         mycursor.execute("""INSERT INTO processor(Company,Name,Cores,Socket_type,Base_clock,Boost_clock,Qty,Price)VALUES(%s,%s,%s,%s,%s,%s,%s,%s)""",(company,name,cores,soctype,basecl,boostcl,qty,price))
                         mydb.commit()
-                        print('Records Added.')
+                        print('Records Inserted')
                     except Exception as e:
                         print("Unable to insert record")
                         print(e)
