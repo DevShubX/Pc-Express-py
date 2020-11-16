@@ -83,7 +83,8 @@ while(c=='y'):
                     try:
                         mydb=mysql.connector.connect(host='localhost',user='root',passwd="",db="pc_express")
                         mycursor=mydb.cursor()
-                        mycursor.execute("SELECT * from motherboard")
+                        d=input("Enter SQL Command for displaying record:")
+                        mycursor.execute(d)
                         results=mycursor.fetchall()
                         for i in results:
                             print(i)
@@ -180,6 +181,9 @@ while(c=='y'):
                         mycursor=mydb.cursor()
                         d=input("Enter the SQL command for displaying Record")
                         mycursor.execute(d)
+                        results=mycursor.fetchall()
+                        for o in results:
+                            print(o)
                         print("Displaying Record...")
                         mydb.commit()
                     except Exception as e:
@@ -274,6 +278,9 @@ while(c=='y'):
                         mycursor=mydb.cursor()
                         g=input("Enter SQL Command for displaying record:")
                         mycursor.execute(g)
+                        results=mycursor.fetchall()
+                        for j in results:
+                            print(j)
                         print('Record Displayed')
                         mydb.commit()
                     except Exception as e:
@@ -364,6 +371,9 @@ while(c=='y'):
                         mycursor=mydb.cursor()
                         v=input("Enter SQL Command for displaying record:")
                         mycursor.execute(v)
+                        results=mycursor.fetchall()
+                        for n in results:
+                            print(n)
                         print('Record Displayed')
                         mydb.commit()
                     except Exception as e:
@@ -454,6 +464,9 @@ while(c=='y'):
                         mycursor=mydb.cursor()
                         r=input('Enter SQL Command for displaying record:')
                         mycursor.execute(r)
+                        results=mycursor.fetchall()
+                        for k in results:
+                            print(k)
                         print('Record Displayed')
                         mydb.commit()
                     except Exception as e:
@@ -542,6 +555,9 @@ while(c=='y'):
                         mycursor=mydb.cursor()
                         d=input("Enter SQL Command for displaying records:")
                         mycursor.execute(d)
+                        results=mycursor.fetchall()
+                        for l in results:
+                            print(l)
                         print("Records Displayed")
                         mydb.commit()
                     except Exception as e:
@@ -630,6 +646,9 @@ while(c=='y'):
                         mycursor=mydb.cursor()
                         j=input('Enter the SQL Command to display record:')
                         mycursor.execute(j)
+                        results=mycursor.fetchall()
+                        for s in results:
+                            print(s)
                         print('Record Displayed')
                         mydb.commit()
                     except Exception as e:
@@ -709,7 +728,7 @@ while(c=='y'):
             try:
                 mydb=mysql.connector.connect(host='localhost',user='root',passwd="",db='pc_express')
                 mycursor=mydb.cursor()
-                q=input('Enter SQL Command for updating records')
+                q=input('Enter SQL Command for updating records:')
                 mycursor.execute(q)
                 print("Record Updates")
                 mydb.commit()
@@ -721,8 +740,11 @@ while(c=='y'):
             try:
                 mydb=mysql.connector.connect(host='localhost',user='root',passwd="",db='pc_express')
                 mycursor=mydb.cursor()
-                g=input('Enter SQL Command for Displaying records')
+                g=input('Enter SQL Command for Displaying records:')
                 mycursor.execute(g)
+                results=mycursor.fetchall()
+                for u in results:
+                    print(u)
                 print('Record Displayed')
                 mydb.commit()
             except Exception as e:
@@ -733,7 +755,7 @@ while(c=='y'):
             try:
                 mydb=mysql.connector.connect(host='localhost',user='root',passwd="",db='pc_express')
                 mycursor=mydb.cursor()
-                k=input('Enter SQL Command to modify records')
+                k=input('Enter SQL Command to modify records:')
                 mycursor.execute(k)
                 print('Record Modified')
                 mydb.commit()
@@ -745,7 +767,7 @@ while(c=='y'):
             try:
                 mydb=mysql.connector.connect(host='localhost',user='root',passwd="",db='pc_express')
                 mycursor=mydb.cursor()
-                i=input('Enter SQL Command to Delete record')
+                i=input('Enter SQL Command to Delete record:')
                 mycursor.execute(i)
                 print('Record deleted')
                 mydb.commit()
