@@ -83,8 +83,7 @@ while(c=='y'):
                     try:
                         mydb=mysql.connector.connect(host='localhost',user='root',passwd="",db="pc_express")
                         mycursor=mydb.cursor()
-                        D=input("Enter the statement to Fetch from table ")
-                        mycursor.execute(D)
+                        mycursor.execute("SELECT * from motherboard")
                         print("Record Displayed")
                         mydb.commit()
                     except Exception as e:
