@@ -84,6 +84,9 @@ while(c=='y'):
                         mydb=mysql.connector.connect(host='localhost',user='root',passwd="",db="pc_express")
                         mycursor=mydb.cursor()
                         mycursor.execute("SELECT * from motherboard")
+                        results=mycursor.fetchall()
+                        for i in results:
+                            print(i)
                         print("Record Displayed")
                         mydb.commit()
                     except Exception as e:
